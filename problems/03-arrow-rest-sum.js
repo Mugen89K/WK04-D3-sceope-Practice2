@@ -11,13 +11,21 @@ arrowRestSum(1, 2, 3, 4, 5, 6, 7, 8, 9); // => 45
 arrowRestSum(0); // => 0
 ***********************************************************************/
 
+// const arrowRestSum = (...nums) => {
+//   let count = 0;
+//   let numArr = [...nums];
+//   for (let i = 0; i < numArr.length; i++) {
+//     count += numArr[i];
+//   }
+//   return count;
+// };
+
+//? ALTNERNATE SOLUTION=========
+
 const arrowRestSum = (...nums) => {
-  let count = 0;
-  let numArr = [...nums];
-  for (let i = 0; i < numArr.length; i++) {
-    count += numArr[i];
-  }
-  return count;
+  let sum = 0;
+  nums.forEach((n) => (sum += n));
+  return sum;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
