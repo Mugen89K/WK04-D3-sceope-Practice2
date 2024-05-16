@@ -17,11 +17,22 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
+// const sandwichMaker = () => {
+//   let ingredient = "tomato";
+//   return function (topping) {
+//     ingredient += " and " + topping;
+//     return "One sandwich with " + ingredient;
+//   };
+// };
+
+//? ALTERNATE SOLUTION ===========
+
 const sandwichMaker = () => {
-  let ingredient = "tomato";
-  return function (topping) {
-    ingredient += " and " + topping;
-    return "One sandwich with " + ingredient;
+  let sandwich = "One sandwich with tomato";
+  //!this is an anonymous function and it does not need to have the word "function" before the parameter.
+  return (topping) => {
+    sandwich += ` and ${topping}`;
+    return sandwich;
   };
 };
 
