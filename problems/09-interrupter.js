@@ -16,11 +16,16 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 ***********************************************************************/
 
-const interrupter = (word) => {
-  return function (string) {
-    return string.split(" ").join(" " + word + " ");
-  };
-};
+// const interrupter = (word) => {
+//   return function (string) {
+//     return string.split(" ").join(" " + word + " ");
+//   };
+// };
+
+//? ALTERNATE SOLUTION
+
+const interrupter = (word) => (string) =>
+  string.split(" ").join(" " + word + " ");
 
 //Look below to see how this function is invoked:
 let rudePerson = interrupter("what"); // => returns a function

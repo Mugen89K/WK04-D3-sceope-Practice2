@@ -28,22 +28,37 @@ Example 4:
 
 ***********************************************************************/
 
-const countDownTimer = (n) => {
-  if (n <= 0) {
-    return "Happy New Year!";
-  }
+// const countDownTimer = (n) => {
+//   if (n <= 0) {
+//     return "Happy New Year!";
+//   }
 
-  return function countdown() {
-    n--;
-    if (n <= 0) {
-      return "Happy New Year!";
+//   return function countdown() {
+//     n--;
+//     if (n <= 0) {
+//       return "Happy New Year!";
+//     }
+//     return countdown;
+//   };
+// };
+
+//? ALTERNATE SOLUTION===================
+
+const countDownTimer = (n) => {
+  if (n < 1) return "Happy New Year!";
+
+  let count = n;
+
+  return () => {
+    if (count > 0) {
+      count--;
+      return countDownTimer(count);
     }
-    return countdown;
   };
 };
 
 // Example 1:
-// console.log(countDownTimer(0)); // prints "Happy New Year!"
+console.log(countDownTimer(0)); // prints "Happy New Year!"
 
 // Example 2:
 let oneDay = countDownTimer(1); // returns a function

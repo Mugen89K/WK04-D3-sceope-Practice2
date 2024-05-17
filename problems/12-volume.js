@@ -13,8 +13,22 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here 
+const recVolume = (height) => {
+  let count = 0;
+  // let vol = height;
+  return (width) => {
+    count++;
+    if (count <= 2) {
+      height *= width;
+    }
+    return height;
+  };
+};
 
+// let rec = recVolume(10);
+// rec(6);
+console.log(recVolume(3)); //this should return 180
+console.log(recVolume(7)); //this should still return 180
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
