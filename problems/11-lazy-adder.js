@@ -22,14 +22,17 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-const lazyAdder = (firstNum) => {
-  return (secondNum) => {
-    return (thirdNum) => {
-      return firstNum + secondNum + thirdNum;
-    };
-  };
-};
+// const lazyAdder = (firstNum) => {
+//   return (secondNum) => {
+//     return (thirdNum) => {
+//       return firstNum + secondNum + thirdNum;
+//     };
+//   };
+// };
 
+//? ALTERNATE SOLUTION=========
+
+const lazyAdder = (n1) => (n2) => (n3) => n1 + n2 + n3;
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
